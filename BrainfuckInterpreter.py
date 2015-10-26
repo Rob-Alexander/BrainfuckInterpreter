@@ -5,6 +5,7 @@ import sys
 VERBOSE = True
 
 def interprete(src, inp = None):
+	## STUB ## - Throw syntax error if filter finds any non-allowed characters (except whitespace) 
 	src = sanitize(src)
 
 	instr = 0
@@ -22,7 +23,7 @@ def interprete(src, inp = None):
 			"Count: {:4d} | Instr: {:3d} | Cmd: {:1s} | Ptr: {:3d} | Val: {:3d}({:1s}) | Result: "
 			.format(count, instr, cmd, ptr, mem[ptr], chrp(mem[ptr])),
 			end = '', flush = True
-		)
+			)
 
 		if cmd == '<':
 			ptr = ptr - 1 if ptr > 0 else 29999
